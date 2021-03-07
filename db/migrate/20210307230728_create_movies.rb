@@ -9,6 +9,7 @@ class CreateMovies < ActiveRecord::Migration[6.0]
       t.datetime :release_date
       t.string :director
       t.string :description
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end

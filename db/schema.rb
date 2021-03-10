@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2021_03_07_230728) do
     t.string "classification"
     t.string "duration"
     t.integer "rating"
-    t.datetime "release_date"
+    t.date "release_date"
     t.string "director"
     t.string "description"
     t.integer "user_id", null: false

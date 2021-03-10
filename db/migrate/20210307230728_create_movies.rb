@@ -6,7 +6,7 @@ class CreateMovies < ActiveRecord::Migration[6.0]
       t.string :classification
       t.string :duration
       t.integer :rating
-      t.datetime :release_date
+      t.date :release_date
       t.string :director
       t.string :description
       t.references :user, null: false, foreign_key: true

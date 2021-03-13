@@ -15,7 +15,7 @@ class MoviesController < ApplicationController
 
   # POST /movies
   def create
-    @movie = Movie.new(movie_params)
+    @movie = current_user.movies.build(movie_params)
 
     if @movie.save
       render json: @movie, status: :created, location: @movie
@@ -46,6 +46,6 @@ class MoviesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def movie_params
-      params.require(:movie).permit(:title, :genre, :classification, :duration, :rating, :release_date, :director, :description)
+      params.require(:movie).permit(:title, :genre, :classification, :duration, :rating, :release_date, :director, :description, :user_id)
     end
 end

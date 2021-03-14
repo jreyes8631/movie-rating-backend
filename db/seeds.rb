@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+new_user = User.create(email:"test@test.com", password:"password1")
+
+user = User.first
+
+@movie1 = user.movies.find_or_create_by(title: 'Godzilla', genre: 'Action', description: 'Monster movie', classification: 'PG-13', duration: '123 min', rating: 5, release_date: '2014', director: 'Gareth Edwards')
+
+

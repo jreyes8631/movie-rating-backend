@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_13_191536) do
+ActiveRecord::Schema.define(version: 2021_03_14_141505) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -38,7 +38,6 @@ ActiveRecord::Schema.define(version: 2021_03_13_191536) do
     t.string "genre"
     t.string "classification"
     t.string "duration"
-    t.integer "rating"
     t.date "release_date"
     t.string "director"
     t.string "description"
@@ -54,6 +53,7 @@ ActiveRecord::Schema.define(version: 2021_03_13_191536) do
     t.integer "movie_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "rating"
     t.index ["movie_id"], name: "index_reviews_on_movie_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end

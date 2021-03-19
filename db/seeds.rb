@@ -11,5 +11,5 @@ new_user = User.create(email:"test@test.com", password:"password1")
 user = User.first
 
 @movie1 = user.movies.find_or_create_by(title: 'Godzilla', genre: 'Action', description: 'Monster movie', classification: 'PG-13', duration: '123 min', release_date: '2014', director: 'Gareth Edwards')
-
+@movie2 = user.movies.find_or_create_by(title: 'Godzilla 2', genre: 'Action', description: 'Monster movie', classification: 'PG-13', duration: '123 min', release_date: 7/12/215, director: 'Gareth Edwards')
 

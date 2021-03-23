@@ -10,7 +10,11 @@ class MoviesController < ApplicationController
 
   # GET /movies/1
   def show
-    render json: @movie
+    hash = MovieSerializer.new(@movie, include: [:reviews]).serializable_hash
+    render json: { 
+      movie: hash[:data][:attributes], 
+      reviews: hash[:included].map{|review| review[:attributes]}
+     }
   end
 
   # POST /movies

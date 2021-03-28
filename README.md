@@ -1,24 +1,21 @@
-# README
+Movie rating app ruby on rails api backend Portfolio Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+movie-rating-backend
 
-Things you may want to cover:
+Introduction:
 
-* Ruby version
+In this app you will have the oportunity to review movies you like. It uses the Rails framework as an api and React as the frontend.
 
-* System dependencies
+Running the app:
 
-* Configuration
+fork and clone this repo.
 
-* Database creation
+cd into movie-rating-backend
 
-* Database initialization
+in the terminal, run bundle install to install all required gems
 
-* How to run the test suite
+run the command "rails s" to start the app server
 
-* Services (job queues, cache servers, search engines, etc.)
+visit localhost:3001 to have the server running.
 
-* Deployment instructions
-
-* ...
+visit https://github.com/jreyes8631/movie-rating-frontend for additional instructons for the frontend.

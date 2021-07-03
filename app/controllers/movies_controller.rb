@@ -14,6 +14,7 @@ class MoviesController < ApplicationController
     render json: { 
       movie: hash[:data][:attributes], 
       reviews: hash[:included].map{|review| review[:attributes]}
+      poster: hash[:included].map{|poster| poster[:attributes]}
      }
   end
 
